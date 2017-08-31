@@ -1,0 +1,21 @@
+{
+  "name": "front-end-test",
+  "version": "1.0.0",
+  "description": "Skills check for new Front-End team hopefuls.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec --compilers js:babel-register -w"
+  },
+  "babel": {
+    "presets": ["env"]
+  },
+  "keywords": [],
+  "author": "Eric R. Shinn <eshinn@autocustoms.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  }
+}
