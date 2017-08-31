@@ -7,10 +7,6 @@
 // remove parenthesis, spaces, and hyphens as in "(321) 321-4321"
 // remove dots as in "321.321.4321"
 
-
-
-
-
 const phoneNumber = (pNum) => {
 
 }
