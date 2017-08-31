@@ -18,22 +18,22 @@ describe('phoneNumber() Returns a phone number formated for a \'<a href="tel:" /
   it('should detect invalid 9-digit numbers', function() {
     expect(phoneNumber('321321432')).to.be.null
   })
-  it('should invalidate (return null) 11-digit numbers that don\'t begin with 1', function() {
+  it('should return null for 11-digit numbers that don\'t begin with 1', function() {
     expect(phoneNumber('43213214321')).to.be.null
   })
   it('should validate when 11 digits and starting with 1 even with punctuation', function() {
     expect(phoneNumber('+1 (321) 321-4321')).to.equal('3213214321')
   })
-  it('should invalidate (return null) when more than 11 digits', function() {
+  it('should return null when more than 11 digits', function() {
     expect(phoneNumber('321321321321')).to.be.null
   })
-  it('should invalidate (return null) when letters and/or punctuation are present', function() {
+  it('should return null when letters and/or punctuation are present', function() {
     expect(phoneNumber('abc-a@c-abcd')).to.be.null
   })
-  it('should invalidate (return null) when area code does not start with 2-9', function() {
+  it('should return null when area code does not start with 2-9', function() {
     expect(phoneNumber('021-321-4321')).to.be.null
   })
-  it('should invalidate (return null) when exchage code does not start with 2-9', function() {
+  it('should return null when exchage code does not start with 2-9', function() {
     expect(phoneNumber('321-021-4321')).to.be.null
   })
 })
