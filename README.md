@@ -57,6 +57,8 @@ To test your JS chops, we've put together a two-file test. Locate the following 
 - `js-check/phoneNumber.js`
 - `js-check/unique.js`
 
+To get test automation up and running, open your terminal to the directory you've saved the project in. Then run `npm install` to install the dependencies and `npm test` to begin running Mocha. Mocha will be watching the files to automatically re-run the tests when it detects your updates. To stop Mocha, press `Ctrl+C`.
+
 #### JS Test 1
 In `phoneNumber`, complete the function to fulfill the following:
 ```
