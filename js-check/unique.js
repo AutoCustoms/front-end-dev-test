@@ -21,6 +21,7 @@ const unique = (arr) => {
     if (stringArr.indexOf(el) === -1) {
       stringArr.push(el);
       result.unshift(arr[i]);
+      // unshift to handle expect(unique([1,2,1,4,3,3,5])).to.deep.equal([2,1,4,3,5])
     }
   }
   return result;
