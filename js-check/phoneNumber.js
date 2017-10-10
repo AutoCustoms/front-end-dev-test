@@ -17,10 +17,10 @@ const phoneNumber = (pNum) => {
   } else if (parsed.length !== 10) {
     return null;
   }
-  return (Number(parsed) && validAreaAndExchange(parsed)) ? parsed : null
+  return (Number(parsed) && areaAndExchange(parsed)) ? parsed : null
 }
 
-const validAreaAndExchange = pNum => (
+const areaAndExchange = pNum => (
   !(pNum[0] === '1' || pNum[0] === '0' || pNum[3] === '1' || pNum[3] === '0')
 )
 
