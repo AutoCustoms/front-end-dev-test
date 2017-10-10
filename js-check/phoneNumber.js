@@ -9,25 +9,19 @@
 
 const phoneNumber = (pNum) => {
   const removeChars = '.()-+ ';
-  const parsed = pNum.split('').filter(char =>
-    removeChars.indexOf(char) === -1 )
+  let parsed = pNum.split('').filter(char =>
+    removeChars.indexOf(char) === -1)
     .join('');
-  const validNum = parseTenDigit(parsed);
-  return (Number(parsed) && validAreaAndExchange(validNum)) ? validNum : null
-}
-
-const parseTenDigit = pNum => {
-  if (pNum.length === 11 && pNum[0] === '1') {
-    return pNum.slice(1);
-  } else if (pNum.length === 10) {
-    return pNum;
-  } else {
+  if (parsed.length === 11 && parsed[0] === '1') {
+    parsed = parsed.slice(1);
+  } else if (parsed.length !== 10) {
     return null;
   }
+  return (Number(parsed) && validAreaAndExchange(parsed)) ? parsed : null
 }
 
 const validAreaAndExchange = pNum => (
-  pNum ? !(pNum[0] === '1' || pNum[0] === '0' || pNum[3] === '1' || pNum[3] === '0') : null
+  !(pNum[0] === '1' || pNum[0] === '0' || pNum[3] === '1' || pNum[3] === '0')
 )
 
 
