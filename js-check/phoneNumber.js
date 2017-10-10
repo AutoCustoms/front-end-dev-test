@@ -19,8 +19,9 @@ const phoneNumber = (pNum) => {
   }
   return (Number(parsed) && areaAndExchange(parsed)) ? parsed : null
 }
-
 const areaAndExchange = n => (
+  // area code does not start with 2-9
+  // exchange code does not start with 2-9
   !(n[0] === '1' || n[0] === '0' || n[3] === '1' || n[3] === '0')
 )
 
