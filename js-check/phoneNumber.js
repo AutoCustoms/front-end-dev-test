@@ -8,9 +8,9 @@
 // remove dots as in "321.321.4321"
 
 const phoneNumber = (pNum) => {
-  const removeChars = '.()-+ ';
+  const puncts = '.()-+ ';
   let parsed = pNum.split('').filter(char =>
-    removeChars.indexOf(char) === -1)
+    puncts.indexOf(char) === -1)
     .join('');
   if (parsed.length === 11 && parsed[0] === '1') {
     parsed = parsed.slice(1);
