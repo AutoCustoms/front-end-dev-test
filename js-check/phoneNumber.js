@@ -20,8 +20,8 @@ const phoneNumber = (pNum) => {
   return (Number(parsed) && areaAndExchange(parsed)) ? parsed : null
 }
 
-const areaAndExchange = pNum => (
-  !(pNum[0] === '1' || pNum[0] === '0' || pNum[3] === '1' || pNum[3] === '0')
+const areaAndExchange = n => (
+  !(n[0] === '1' || n[0] === '0' || n[3] === '1' || n[3] === '0')
 )
 
 
