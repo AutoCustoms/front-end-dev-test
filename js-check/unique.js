@@ -17,9 +17,9 @@ const unique = (arr) => {
   const result = [];
   const stringArr = [];
   for (let i = arr.length - 1; i >= 0; i--) {
-    let stringify = JSON.stringify(arr[i]);
-    if (stringArr.indexOf(stringify) === -1) {
-      stringArr.push(stringify);
+    let el = JSON.stringify(arr[i]);
+    if (stringArr.indexOf(el) === -1) {
+      stringArr.push(el);
       result.unshift(arr[i]);
     }
   }
