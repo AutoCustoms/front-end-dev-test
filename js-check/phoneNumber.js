@@ -9,34 +9,27 @@
 
 const phoneNumber = (pNum) => {
   const removeChars = '.()-+ ';
-  let pNumParsed = pNum.split('').filter(char => removeChars.indexOf(char) === -1 ).join('');
-  if (isNumeric(pNumParsed)) {
-    let tenDigit = parseTenDigit(pNumParsed);
-    if (!tenDigit) {
-      return null;
-    }
-    if (validAreaAndExchange(tenDigit)) {
-      return tenDigit;
-    }
-  }
-  return null;
+  const parsed = pNum.split('').filter(char =>
+    removeChars.indexOf(char) === -1 )
+    .join('');
+  const validNum = parseTenDigit(parsed);
+  return (isNumeric(parsed) && validAreaAndExchange(validNum)) ? validNum : null
 }
 
-const isNumeric = (n) => (!!Number(n));
+const isNumeric = n => !!Number(n);
 
-const parseTenDigit = (pNum) => {
-  let tenDigit = pNum;
-  if (tenDigit.length === 11 && tenDigit[0] === '1') {
-    return tenDigit.slice(1);
-  } else if (tenDigit.length === 10){
-    return tenDigit;
+const parseTenDigit = pNum => {
+  if (pNum.length === 11 && pNum[0] === '1') {
+    return pNum.slice(1);
+  } else if (pNum.length === 10) {
+    return pNum;
   } else {
     return null;
   }
 }
 
-const validAreaAndExchange = (pNum) => (
-  !(pNum[0] === '1' || pNum[0] === '0' || pNum[3] === '1' || pNum[3] === '0')
+const validAreaAndExchange = pNum => (
+  pNum ? !(pNum[0] === '1' || pNum[0] === '0' || pNum[3] === '1' || pNum[3] === '0') : null
 )
 
 

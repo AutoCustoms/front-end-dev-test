@@ -14,13 +14,13 @@
 // [{foo: 'bar'}, {foo: 'bar'}] => [{foo: 'bar'}]
 
 const unique = (arr) => {
-  let result = [];
-  let stringArr = [];
+  const result = [];
+  const stringArr = [];
   for (let i = arr.length - 1; i >= 0; i--) {
-    let el = arr[i];
-    if (stringArr.indexOf(JSON.stringify(el)) === -1) {
-      stringArr.push(JSON.stringify(el));
-      result.unshift(el);
+    let stringify = JSON.stringify(arr[i]);
+    if (stringArr.indexOf(stringify) === -1) {
+      stringArr.push(stringify);
+      result.unshift(arr[i]);
     }
   }
   return result;
