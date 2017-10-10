@@ -13,7 +13,7 @@ const phoneNumber = (pNum) => {
     removeChars.indexOf(char) === -1 )
     .join('');
   const validNum = parseTenDigit(parsed);
-  return (isNumeric(parsed) && validAreaAndExchange(validNum)) ? validNum : null
+  return (isNumeric(parsed) && validAreaAndExchange(validNum)) ? validNum : null;
 }
 
 const isNumeric = n => !!Number(n);
@@ -29,7 +29,7 @@ const parseTenDigit = pNum => {
 }
 
 const validAreaAndExchange = pNum => (
-  pNum ? !(pNum[0] === '1' || pNum[0] === '0' || pNum[3] === '1' || pNum[3] === '0') : null
+  pNum ? !(pNum[0] === '1' || pNum[0] === '0' || pNum[3] === '1' || pNum[3] === '0') : null;
 )
 
 
