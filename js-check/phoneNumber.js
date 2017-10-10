@@ -9,9 +9,7 @@
 
 const phoneNumber = (pNum) => {
   const puncts = '.()-+ ';
-  let parsed = pNum.split('').filter(char =>
-    puncts.indexOf(char) === -1)
-    .join('');
+  let parsed = pNum.split('').filter(ch => puncts.indexOf(ch) === -1).join('');
   if (parsed.length === 11 && parsed[0] === '1') {
     parsed = parsed.slice(1);
   } else if (parsed.length !== 10) {
@@ -19,9 +17,8 @@ const phoneNumber = (pNum) => {
   }
   return (Number(parsed) && areaAndExchange(parsed)) ? parsed : null
 }
+
 const areaAndExchange = n => (
-  // area code does not start with 2-9
-  // exchange code does not start with 2-9
   !(n[0] === '1' || n[0] === '0' || n[3] === '1' || n[3] === '0')
 )
 
