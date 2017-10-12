@@ -1,0 +1,17 @@
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  span {
+    background: blue
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 980px) {
+  span {
+    background: red
+  }
+}
+
+@media screen and (min-width: 980px) {
+  span {
+    background: green
+  }
+}
