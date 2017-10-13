@@ -1,5 +1,7 @@
 @media screen and (min-width: 980px) {
-  span {
-    background: green
-  }
+  .img-height { height: 550px }
+  .col-1-2 { width: 25% !important }
+  .item { height: 250px !important; display: grid !important; }
+  .item-container > .item > .item-img { width: 100% !important; height: 200px }
+  .item-container > .item > .item-desc { width: 100% !important; }
 }
