@@ -8,8 +8,20 @@
 // remove dots as in "321.321.4321"
 
 const phoneNumber = (pNum) => {
-
+  const puncts = '.()-+ ';
+  let parsed = pNum.split('').filter(ch => puncts.indexOf(ch) === -1).join('');
+  if (parsed.length === 11 && parsed[0] === '1') {
+    parsed = parsed.slice(1);
+  } else if (parsed.length !== 10) {
+    return null;
+  }
+  return (Number(parsed) && areaAndExchange(parsed)) ? parsed : null
 }
+
+const areaAndExchange = n => (
+  !(n[0] === '1' || n[0] === '0' || n[3] === '1' || n[3] === '0')
+)
+
 
 module.exports = phoneNumber
 // Note: It's not neccessary to have all code into the 'phoneNumber'

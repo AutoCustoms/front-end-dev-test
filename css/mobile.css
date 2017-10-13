@@ -1,0 +1,9 @@
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .logo { width: 55%; }
+  .img-height { height: 220px; }
+  .paginate { color: dimgrey; }
+  .col-1-2 { width: 100% !important}
+  .item > .item-desc > .item-name { font-size: 24px; }
+  .item > .item-desc > .price { font-size: 24px; }
+  .item > .item-desc:nth-child(1n) { }
+}

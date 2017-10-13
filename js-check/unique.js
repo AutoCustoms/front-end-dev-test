@@ -14,7 +14,17 @@
 // [{foo: 'bar'}, {foo: 'bar'}] => [{foo: 'bar'}]
 
 const unique = (arr) => {
-  // Add your code here.
+  const result = [];
+  const stringArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    let el = JSON.stringify(arr[i]);
+    if (stringArr.indexOf(el) === -1) {
+      stringArr.push(el);
+      result.unshift(arr[i]);
+      // unshift to handle expect(unique([1,2,1,4,3,3,5])).to.deep.equal([2,1,4,3,5])
+    }
+  }
+  return result;
 }
 
 module.exports = unique

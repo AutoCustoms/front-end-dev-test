@@ -1,0 +1,9 @@
+@media screen and (min-width: 480px) and (max-width: 980px) {
+  .logo { width: 30% }
+  .img-height { height: 450px; }
+  .categories-container { background-color: orange; position: relative; top: -77px; opacity: 0.8 }
+  .categories-container > .sorting-container { padding: 12px; background: lightgrey }
+  .item-container { position: relative; top: -77px;}
+  .item > .item-desc > .item-name { font-size: 22px; }
+  .item > .item-desc > .price { font-size: 22px; }
+}
