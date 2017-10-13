@@ -1,17 +1,15 @@
-@media screen and (max-width: 480px) and (orientation: portrait) {
-  span {
-    background: blue
-  }
+.col-1-2 {
+  width: 50%;
 }
 
-@media screen and (min-width: 480px) and (max-width: 980px) {
-  span {
-    background: red
-  }
+.col-1-12 {
+  width: 8.333333333333%;
 }
 
-@media screen and (min-width: 980px) {
-  span {
-    background: green
-  }
+.col-1-1 {
+  width: 100%;
+}
+
+.col-1-4 {
+  width: 25%;
 }
