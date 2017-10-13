@@ -1,15 +1,45 @@
-.col-1-2 {
-  width: 50%;
+li, ul, span, div, body, nav { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; }
+nav { padding: 10px 0 10px 0; position: relative; height: 30px; }
+
+.col-1-2 { width: 50%; }
+.col-1-12 { width: 8.333333333333%; }
+.col-1-1 { width: 100%; }
+.col-1-4 { width: 25%; }
+
+.strong { font-weight: 700; font-family: sans-serif; }
+
+.logo {
+  background-image: url('../assets/realtruck_horizontal.svg');
+  background-repeat: no-repeat;
+  position: relative;
+  height: inherit;
+  margin: 0 auto;
 }
 
-.col-1-12 {
-  width: 8.333333333333%;
-}
-
-.col-1-1 {
+.truck-img {
+  background-image: url('../assets/truck.png');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
 
-.col-1-4 {
-  width: 25%;
+.categories-container { display: inline-grid; }
+.categories-container > .top-level { display: inherit; padding: 0 12px 0 12px; }
+.categories-container > .top-level > .main-category { padding: 12px 0 0 0; font-size: 15px; color: grey; }
+.categories-container > .top-level > .sub-category { font-weight: bold; font-size: 30px; letter-spacing: 1px; font-family: sans-serif; }
+
+.sorting-container { display: flex; margin-top: 12px; padding: 0 12px 0 12px; }
+.sorting-container > .sort { text-align: right; font-weight: 600; font-family: sans-serif; }
+
+.item-container { display: flex; flex-wrap: wrap; padding: 0 12px 0 12px; margin: 24px 0 24px 0;}
+.item-container > .item { height: 150px; display: flex; margin: 6px 0 6px 0; }
+.item-container > .item > .item-desc { display: grid; }
+.item-container > .item > .item-img {
+  background-image: url('../assets/wheel.png');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: inherit;
+  height: inherit;
 }
