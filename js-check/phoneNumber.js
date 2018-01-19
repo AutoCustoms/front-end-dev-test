@@ -9,10 +9,10 @@
 
 const phoneNumber = (pNum) => {
   const number = pNum.replace(/\D+/g, '');
-  const countryCode = number.charAt(0);
+  const firstDigit = number.charAt(0);
   const reg = new RegExp(/^[2-9]\d{2}[2-9]\d{2}\d{4}$/).test(number);
   if(number.length >= 11) {
-    return countryCode == 1 ? number.substr(1) : null;
+    return firstDigit == 1 ? number.substr(1) : null;
   }
     return reg ? number : null;
 }
