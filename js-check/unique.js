@@ -14,7 +14,10 @@
 // [{foo: 'bar'}, {foo: 'bar'}] => [{foo: 'bar'}]
 
 const unique = (arr) => {
-  // Add your code here.
+  const format = arr.map(JSON.stringify).filter((_el, _index, _str) => {
+    return _str.indexOf(_el, _index+1) === -1;
+  }).map(JSON.parse);
+  return format;
 }
 
 module.exports = unique
