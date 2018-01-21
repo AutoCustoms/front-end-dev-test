@@ -26,6 +26,8 @@
           <li> <i class="fas fa-shopping-cart"></i></li>
         </ul>
     </header>
+    <label for="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></label>
+    <input type="checkbox" id="menu-toggle"/>
     <nav class="nav">
       <ul class="nav__main">
         <li class="nav__main--extra">Exterior <span>Acessories</span></li>
@@ -40,17 +42,17 @@
       </ul>
     </nav>
     <article class="banner">
-        <div class="banner__description">
-            <h1 class="banner__description--category">Truck Accessories > </h1>
-            <h2 class="banner__description--header">Wheels & Rims</h2>
-        </div>
+      <div class="banner__description">
+          <h1 class="banner__description--category">Truck Accessories > </h1>
+          <h2 class="banner__description--header">Wheels & Rims</h2>
+      </div>
     </article>
     <section class="products">
       <article class="products__pagination">
-        <p class="products__results">Showing 1 - 30 of 422 results</p>
+        <p class="products__results"><span class="hide">Showing </span> 1 - 30 of 422 <span class="hide">results</span></p>
         <form class="products__filter" action="">
-          <label>Show:</label>
-          <select name="items" class="itemNumbers">
+          <label class="hide">Show:</label>
+          <select name="items" class="itemNumbers hide">
             <option value="30">30</option>
           </select>
           <label>Sort by:</label>

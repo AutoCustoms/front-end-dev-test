@@ -3,7 +3,6 @@
   padding-top 25px
   margin 0 auto
 
-
 // Main banner Home
 .banner
   width 100%
@@ -50,9 +49,9 @@
     background-size contain
     max-height 138px
     &__description
-      display none
+      position relative
+      top 130px
       background-color white
-
 
 // Main list of products
 .products__container
@@ -68,6 +67,11 @@
     background #eeeeee
     padding 20px
     margin-bottom 25px
+    @media (max-width 550px)
+      .hide
+        display none
+    @media (max-width mobile)
+      margin-top 50px
   &__results
     float left
   &__filter

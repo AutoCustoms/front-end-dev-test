@@ -194,7 +194,7 @@ table {
 }
 .nav {
   width: 100%;
-  height: 54px;
+  min-height: 57px;
   margin-bottom: 12px;
   background-color: #222;
 }
@@ -207,18 +207,80 @@ table {
   font-size: 0.9em;
 }
 .nav__main li:hover {
+  height: 25px;
+  background: #333;
   color: #fff;
   cursor: pointer;
 }
 .nav__main li span {
   display: block;
 }
+.nav .nav__main--extra:hover {
+  height: 33px;
+}
 .nav__main li:not(.nav__main--extra) {
   padding-top: 20px;
 }
+#menu-toggle,
+#mobile-menu {
+  display: none;
+}
 @media (max-width: 1236px) {
+  .fa-bars {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    font-size: 2em;
+  }
+  #mobile-menu {
+    display: block;
+    position: relative;
+    z-index: 5;
+    color: #000;
+  }
+  #menu-toggle:checked + .nav {
+    margin-left: 0;
+  }
   .nav {
-    display: none;
+    width: 220px;
+    margin-left: -250px;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    z-index: 3;
+    background-color: rgba(35,35,35,0.98);
+  }
+  .nav__main {
+    margin-top: 100px;
+  }
+  .nav__main li {
+    width: 179px;
+    height: 20px;
+    padding: 20px;
+    margin-left: 0px;
+    border-bottom: 0.2px #eee solid;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 1.1em;
+    color: #fff;
+  }
+  .nav__main li:hover,
+  .nav__main li .nav__main--extra:hover {
+    height: 20px;
+  }
+  .nav__main li span {
+    display: inline;
+  }
+  .mobile-menu {
+    display: block;
+    float: left;
+    position: fixed;
+    z-index: 4;
+  }
+  .mobile-menu .fa-bars {
+    color: #fff;
+    font-size: 1.8em;
   }
 }
 .footer {
@@ -323,7 +385,8 @@ table {
     max-height: 138px;
   }
   .banner__description {
-    display: none;
+    position: relative;
+    top: 130px;
     background-color: #fff;
   }
 }
@@ -340,6 +403,16 @@ table {
   background: #eee;
   padding: 20px;
   margin-bottom: 25px;
+}
+@media (max-width: 550px) {
+  .products__pagination .hide {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .products__pagination {
+    margin-top: 50px;
+  }
 }
 .products__results {
   float: left;
