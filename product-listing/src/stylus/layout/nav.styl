@@ -15,8 +15,26 @@
       display none
     &:focus
       outline none
-  &__phone
+  &__contact
     text-decoration none
+    text-align left
+    li
+      float left
+      margin-left 10px
+    span
+      font-weight bold
+      font-size 1.3em
+    p
+      font-size .8em
+      font-weight normal
+    .fa-phone
+      color black
+      transform: scale(-1, 1)
+      font-size 1.5em
+      margin-right 5px
+      margin-top 3px
+    .fa-shopping-cart
+      font-size 1.5em
     @media (max-width desktop)
       display none
   &__logo
@@ -24,6 +42,8 @@
     @media (max-width desktop)
       max-height 40px
       margin 0 auto
+
+
 
 
 .nav
@@ -38,6 +58,9 @@
     padding 12px
     font-weight bold
     font-size .9em
+    &:hover
+      color white
+      cursor pointer
     span
       display block
   // do not apply the style where the text needs extra space

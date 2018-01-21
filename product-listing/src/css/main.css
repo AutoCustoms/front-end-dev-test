@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900");
 body {
   font-family: Roboto, sans-serif;
+}
+* {
+  transition: all 0.3s ease-in-out;
 }
 html,
 body,
@@ -149,11 +152,34 @@ table {
 .mainHeader__search:focus {
   outline: none;
 }
-.mainHeader__phone {
+.mainHeader__contact {
   text-decoration: none;
+  text-align: left;
+}
+.mainHeader__contact li {
+  float: left;
+  margin-left: 10px;
+}
+.mainHeader__contact span {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.mainHeader__contact p {
+  font-size: 0.8em;
+  font-weight: normal;
+}
+.mainHeader__contact .fa-phone {
+  color: #000;
+  transform: scale(-1, 1);
+  font-size: 1.5em;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+.mainHeader__contact .fa-shopping-cart {
+  font-size: 1.5em;
 }
 @media (max-width: 1236px) {
-  .mainHeader__phone {
+  .mainHeader__contact {
     display: none;
   }
 }
@@ -179,6 +205,10 @@ table {
   padding: 12px;
   font-weight: bold;
   font-size: 0.9em;
+}
+.nav__main li:hover {
+  color: #fff;
+  cursor: pointer;
 }
 .nav__main li span {
   display: block;

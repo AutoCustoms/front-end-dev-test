@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Real Truck</title>
   <link rel="stylesheet" href="./css/main.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 </head>
 <body>
   <main class="main">
@@ -16,10 +17,14 @@
         <form action="#">
           <input class="mainHeader__search" type="text" placeholder="search...">
         </form>
-        <a class="mainHeader__phone" href="855-216-5446">
-          <span>855-216-5446</span>
-          <p>Sales & Service Hours</p>
-        </a>
+        <ul class="mainHeader__contact">
+          <li><i class="fas fa-phone"></i></li>
+          <li class="mainHeader__contact--phone">
+              <span>877-216-5446</span>
+              <p>Sales & Service Hours</p>
+          </li>
+          <li> <i class="fas fa-shopping-cart"></i></li>
+        </ul>
     </header>
     <nav class="nav">
       <ul class="nav__main">
@@ -129,7 +134,6 @@
           <div class="products__list--border"></div>
         </li>
       </ul>
-
     </section>
   </main>
   <footer class="footer">
