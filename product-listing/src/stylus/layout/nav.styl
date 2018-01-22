@@ -1,0 +1,143 @@
+#menu-toggle:checked + .nav .main
+  background red !important
+
+.mainHeader
+  display flex
+  justify-content space-between
+  margin-bottom 12px
+  box-sizing border-box
+  padding 0px 12px 0px 12px
+  &__search
+    width 340px
+    height 30px
+    border 0
+    margin-left 330px
+    font-size 1.2em
+    font-weight normal
+    background-color #eeeeee
+    box-sizing border-box
+    padding 10px
+    @media (max-width desktop)
+      display none
+    &:focus
+      outline none
+  &__contact
+    text-decoration none
+    text-align left
+    li
+      float left
+      margin-left 10px
+    span
+      font-weight bold
+      font-size 1.3em
+    p
+      font-size .8em
+      font-weight normal
+    .fa-phone
+      color black
+      transform: scale(-1, 1)
+      font-size 1.5em
+      margin-right 5px
+      margin-top 3px
+    .fa-shopping-cart
+      font-size 1.5em
+    @media (max-width desktop)
+      display none
+  &__logo
+    max-height 43px
+    @media (max-width desktop)
+      max-height 40px
+      margin 0 auto
+
+.nav
+  width 100%
+  min-height 57px
+  margin-bottom 12px
+  background-color darkGray
+  .hide
+    display none
+  &__main li
+    color #cccccc
+    float left
+    margin-left 35px
+    padding 12px
+    font-weight bold
+    font-size .9em
+    &:hover
+      // height 25px
+      background #333333
+      color white
+      cursor pointer
+    span
+      display block
+  .nav__main--extra:hover
+    height 33px
+  // do not apply the style where the text needs extra space
+  &__main li:not(.nav__main--extra)
+    padding-top 20px
+
+// intial states for mobile
+#menu-toggle, #mobile-menu
+  display none
+.mainHeader__search--mobile
+  display none
+
+// menu mobile
+@media (max-width desktop)
+  .fa-bars
+    position absolute
+    top -50px
+    left 15px
+    font-size 2em
+  #mobile-menu
+    display block
+    position relative
+    z-index 5
+    color black
+  #menu-toggle:checked + .nav
+    margin-left 0
+  .nav
+    width 220px
+    margin-left -250px
+    min-height 100vh
+    position fixed
+    top 0
+    padding 0
+    z-index 3
+    background-color rgba(55,55,55, 0.98)
+    &__main
+      margin-top 50px
+      li
+        width 179px
+        height 20px
+        padding 20px
+        margin-left 0px
+        border-bottom .2px #eeeeee solid
+        display inline-block
+        font-weight normal
+        font-size 1.1em
+        color white
+        span
+          display inline
+      .nav__main--extra:hover
+        height 20px
+  .mobile-menu
+    display block
+    float left
+    position fixed
+    z-index 4
+    .fa-bars
+      color white
+      font-size 1.8em
+  .mainHeader__search--mobile
+    display block
+    min-width 100%
+    margin-left 0px
+    margin-bottom 20px
+    input
+      margin-left -20px
+      min-width 97%
+      height 50px
+      border-bottom none
+    &:hover
+      background none !important
