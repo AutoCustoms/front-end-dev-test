@@ -140,6 +140,9 @@ table {
   width: 340px;
   height: 30px;
   border: 0;
+  margin-left: 330px;
+  font-size: 1.2em;
+  font-weight: normal;
   background-color: #eee;
   box-sizing: border-box;
   padding: 10px;
@@ -228,7 +231,7 @@ table {
 @media (max-width: 1236px) {
   .fa-bars {
     position: absolute;
-    top: 25px;
+    top: -50px;
     left: 15px;
     font-size: 2em;
   }
@@ -244,12 +247,12 @@ table {
   .nav {
     width: 220px;
     margin-left: -250px;
-    min-height: 100%;
+    min-height: 100vh;
     position: fixed;
     top: 0;
     padding: 0;
     z-index: 3;
-    background-color: rgba(35,35,35,0.98);
+    background-color: rgba(55,55,55,0.98);
   }
   .nav__main {
     margin-top: 100px;
@@ -482,5 +485,59 @@ table {
   }
   .products__list--image {
     min-width: 100px;
+  }
+}
+.pagination {
+  float: right;
+  height: 30px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.pagination .hide {
+  display: none;
+}
+.pagination li {
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  box-sizing: border-box;
+  padding: 7px;
+  background: #fafafa;
+  float: left;
+  border: #ddd 1px solid;
+}
+.pagination li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+.pagination li:last-child,
+.pagination li:nth-child(1) {
+  padding: 0;
+  font-size: 1.6em;
+}
+@media (max-width: 1236px) {
+  .pagination {
+    width: 365px;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .pagination {
+    width: 70%;
+  }
+  .pagination li {
+    min-width: 47%;
+  }
+  .pagination .hide {
+    font-size: 0.7em;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+  }
+  .pagination .p-number {
+    display: none;
   }
 }
