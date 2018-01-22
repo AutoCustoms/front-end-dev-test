@@ -1,0 +1,36 @@
+.footer
+  width 100%
+  min-height 64px
+  position relative
+  bottom 0
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  padding 10px 50px 10px 50px
+  box-sizing border-box
+  background-color primary-color
+  border-top 12px solid secondary-color
+  &__copyright
+    color #d3d3d3
+    font-size .75em
+    line-height 1.4em
+    &--website
+      color white
+  &__logo
+    width 165px
+    max-height 30px
+
+@media (max-width 450px)
+  .footer
+    flex-direction row-reverse
+    &__logo
+      padding-top 15px
+      order 1
+      margin 0 auto
+    &__copyright
+      padding-top 15px
+      width 100%
+      text-align center
+      order 2
+      text-align center
+      margin-bottom 25px
