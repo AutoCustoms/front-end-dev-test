@@ -129,6 +129,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+#menu-toggle:checked + .nav .main {
+  background: #f00 !important;
+}
 .mainHeader {
   display: flex;
   justify-content: space-between;
@@ -201,6 +204,9 @@ table {
   margin-bottom: 12px;
   background-color: #222;
 }
+.nav .hide {
+  display: none;
+}
 .nav__main li {
   color: #ccc;
   float: left;
@@ -210,7 +216,6 @@ table {
   font-size: 0.9em;
 }
 .nav__main li:hover {
-  height: 25px;
   background: #333;
   color: #fff;
   cursor: pointer;
@@ -226,6 +231,9 @@ table {
 }
 #menu-toggle,
 #mobile-menu {
+  display: none;
+}
+.mainHeader__search--mobile {
   display: none;
 }
 @media (max-width: 1236px) {
@@ -255,7 +263,7 @@ table {
     background-color: rgba(55,55,55,0.98);
   }
   .nav__main {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .nav__main li {
     width: 179px;
@@ -268,12 +276,11 @@ table {
     font-size: 1.1em;
     color: #fff;
   }
-  .nav__main li:hover,
-  .nav__main li .nav__main--extra:hover {
-    height: 20px;
-  }
   .nav__main li span {
     display: inline;
+  }
+  .nav__main .nav__main--extra:hover {
+    height: 20px;
   }
   .mobile-menu {
     display: block;
@@ -284,6 +291,21 @@ table {
   .mobile-menu .fa-bars {
     color: #fff;
     font-size: 1.8em;
+  }
+  .mainHeader__search--mobile {
+    display: block;
+    min-width: 100%;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+  .mainHeader__search--mobile input {
+    margin-left: -20px;
+    min-width: 97%;
+    height: 50px;
+    border-bottom: none;
+  }
+  .mainHeader__search--mobile:hover {
+    background: none !important;
   }
 }
 .footer {

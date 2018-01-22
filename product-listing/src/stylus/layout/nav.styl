@@ -1,3 +1,6 @@
+#menu-toggle:checked + .nav .main
+  background red !important
+
 .mainHeader
   display flex
   justify-content space-between
@@ -51,6 +54,8 @@
   min-height 57px
   margin-bottom 12px
   background-color darkGray
+  .hide
+    display none
   &__main li
     color #cccccc
     float left
@@ -59,7 +64,7 @@
     font-weight bold
     font-size .9em
     &:hover
-      height 25px
+      // height 25px
       background #333333
       color white
       cursor pointer
@@ -71,10 +76,11 @@
   &__main li:not(.nav__main--extra)
     padding-top 20px
 
-// intial state for mobile menu icon
+// intial states for mobile
 #menu-toggle, #mobile-menu
   display none
-
+.mainHeader__search--mobile
+  display none
 
 // menu mobile
 @media (max-width desktop)
@@ -100,7 +106,7 @@
     z-index 3
     background-color rgba(55,55,55, 0.98)
     &__main
-      margin-top 100px
+      margin-top 50px
       li
         width 179px
         height 20px
@@ -111,10 +117,10 @@
         font-weight normal
         font-size 1.1em
         color white
-        &:hover, .nav__main--extra:hover
-          height 20px
         span
           display inline
+      .nav__main--extra:hover
+        height 20px
   .mobile-menu
     display block
     float left
@@ -123,3 +129,15 @@
     .fa-bars
       color white
       font-size 1.8em
+  .mainHeader__search--mobile
+    display block
+    min-width 100%
+    margin-left 0px
+    margin-bottom 20px
+    input
+      margin-left -20px
+      min-width 97%
+      height 50px
+      border-bottom none
+    &:hover
+      background none !important
