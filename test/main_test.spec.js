@@ -3,8 +3,9 @@
  * ...unless you find it interesting.
  */
 
-import assert from 'assert'
-import { expect } from 'chai'
+// import assert from 'assert'
+import  {expect}  from 'chai';
+// const expect = require('chai')
 
 describe('phoneNumber() Returns a phone number formated for a \'<a href="tel:" />\' link', function() {
   const phoneNumber = require('../js-check/phoneNumber')
@@ -22,7 +23,7 @@ describe('phoneNumber() Returns a phone number formated for a \'<a href="tel:" /
     expect(phoneNumber('43213214321')).to.be.null
   })
   it('should validate when 11 digits and starting with 1 even with punctuation', function() {
-    expect(phoneNumber('+1 (321) 321-4321')).to.equal('3213214321')
+    expect(phoneNumber("+1 (321) 321-4321")).to.equal('3213214321');
   })
   it('should return null when more than 11 digits', function() {
     expect(phoneNumber('321321321321')).to.be.null
@@ -45,7 +46,7 @@ describe('unique() Returns an array free of duplicate entries', function() {
     expect(unique(['a','ab','ab','b','b','c'])).to.deep.equal(['a','ab','b','c'])
   })
   it('should handle numbers', function() {
-    expect(unique([1,2,1,4,3,3,5])).to.deep.equal([2,1,4,3,5])
+    expect(unique([1,2,1,4,3,3,5])).to.deep.equal([1,2,4,3,5])
   })
   it('should handle arrays', function() {
     expect(unique([[1],[1],[1,2]])).to.deep.equal([[1],[1,2]])
