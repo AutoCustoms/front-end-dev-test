@@ -1,0 +1,196 @@
+main {
+  line-height: 1.3;
+  padding: 0 12px;
+  text-transform: capitalize;
+}
+.navDes {
+  display: none;
+}
+.navMob {
+  display: flex;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+.navMob p {
+  font-size: 1.5rem;
+}
+.navMob p:last-of-type {
+  /* flex: 1; */
+  margin-left: 3rem;
+}
+.navMob img {
+  width: 12rem;
+}
+.mainImg {
+  height: 190px;
+  background-size: cover;
+  background-image: url("./assets/truck.png");
+}
+.mobile {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.breadcrub {
+  padding: 10px;
+}
+.breadcrub p:last-of-type {
+  font-weight: 800;
+  font-size: 2.2rem;
+}
+
+.product {
+  display: flex;
+  border-bottom: 1px grey solid;
+  padding: 1rem 0;
+}
+
+.product img {
+  height: 130px;
+  margin-right: 10px;
+}
+
+.product div {
+  font-weight: 800;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price p:first-of-type {
+  font-weight: normal;
+  font-size: 12px;
+  padding-top: 5px;
+}
+.pageSelect {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+footer {
+  border-top: rgb(237, 184, 30) solid 15px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #333;
+  color: gainsboro;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+}
+footer p {
+  padding: 2px 0;
+}
+footer strong {
+  color: white;
+}
+footer img {
+  height: 30px;
+}
+
+@media (min-width: 768px) {
+  body {
+    position: relative;
+  }
+  .navMob {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .navMob p:last-of-type {
+    margin-left: 15rem;
+  }
+
+  .breadcrub {
+    position: absolute;
+    top: 417px;
+    width: 100%;
+    background-color: rgba(237, 184, 30, 0.8);
+    padding: 15px;
+  }
+  .mobile {
+    background-color: gainsboro;
+    padding: 14px;
+  }
+  .mainImg {
+    height: 465px;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .product {
+    width: 44%;
+    margin: 1rem;
+  }
+  footer {
+    padding: 1rem 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: 0rem 3rem;
+  }
+  .searchSec {
+    padding: 10px 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .searchSec img {
+    height: 30px;
+  }
+  .navDes {
+    display: flex;
+    flex-direction: column;
+  }
+  .desNavSection {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    background-color: #333;
+    margin-bottom: 10px;
+  }
+  .desNavSection p {
+    padding: 1rem;
+    color: white;
+  }
+  .navMob {
+    display: none;
+  }
+  .breadcrub {
+    margin-left: 20px;
+    width: 340px;
+    top: 445px;
+  }
+  .breadcrub p:last-of-type {
+    color: white;
+  }
+  .mainImg {
+    background-position: center bottom;
+    height: 451px;
+    /* background: url("./assets/truck.png") no-repeat center center fixed; */
+  }
+  main {
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+  }
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+  .product div {
+    justify-content: unset;
+    font-size: 1rem;
+    margin-top: 13pt;
+  }
+  .product .price {
+    flex-direction: row;
+  }
+}

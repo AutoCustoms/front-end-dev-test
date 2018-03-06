@@ -7,7 +7,9 @@
     "test": "mocha --reporter spec --compilers js:babel-register -w"
   },
   "babel": {
-    "presets": ["env"]
+    "presets": [
+      "env"
+    ]
   },
   "keywords": [],
   "author": "Eric R. Shinn <eshinn@autocustoms.com>",
